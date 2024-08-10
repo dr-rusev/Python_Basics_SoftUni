@@ -19,7 +19,7 @@
 volume = int(input())
 debit_p1 = int(input())
 debit_p2 = int(input())
-hours = float(input()) # [1.0…24.00]
+hours = float(input())  # [1.0…24.00]
 
 vol_p1 = debit_p1 * hours
 vol_p2 = debit_p2 * hours
@@ -29,8 +29,10 @@ if vol_common <= volume:
     fill_pool = (vol_common / volume) * 100
     fill_p1 = (vol_p1 / vol_common) * 100
     fill_p2 = (vol_p2 / vol_common) * 100
-    print("The pool is " + f'{fill_pool:.2f}' + "% full. Pipe 1: " + f'{fill_p1:.2f}' + "%. Pipe 2: " + f'{fill_p2:.2f}' + "%")
+    print(
+        "The pool is " + f'{fill_pool:.2f}' + "% full. Pipe 1: "
+        + f'{fill_p1:.2f}' + "%. Pipe 2: " + f'{fill_p2:.2f}' + "%")
 
 else:
-    print("For " f'{hours}' + " hours" + " the pool overflows with " + f'{vol_common - volume:.2f}' + " liters.")
-
+    print("For " f'{hours}' + " hours" + " the pool overflows with "
+          + f'{vol_common - volume:.2f}' + " liters.")
